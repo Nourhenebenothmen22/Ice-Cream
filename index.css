@@ -1,3 +1,6 @@
+    :root{
+        --max-width: 1200px;
+    }
     *{
         font-family: "Poppins", sans-serif;
         font-weight: 500;
@@ -39,7 +42,31 @@
         transform: translateY(-3px);
         text-shadow: 0 3px 8px rgba(52, 152, 219, 0.2);
     }
-    
+    /* Ajoutez ces styles dans votre CSS */
+.nav-link.cart {
+    padding: 8px 15px !important;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link.cart:hover {
+    background: rgba(255, 107, 107, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .nav-link.cart i {
+    color: #ff6b6b;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-link.cart:hover i {
+    transform: scale(1.1);
+    color: #e74c3c;
+  }
+  
+ 
 
     /* Bouton de recherche */
     .btn {
@@ -106,4 +133,134 @@
     .social-link:hover {
         color: #ff6b6b;
     }
-    
+    .section__container {
+        max-width: var(--max-width);
+        margin: auto;
+        padding: 5rem 1rem;
+      }
+      
+      .section__header {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color:#ff6b6b;
+        line-height: 3rem;
+      }
+      .popular__grid {
+        margin-top: 4rem;
+        display: grid;
+        gap: 4rem 1rem;
+        align-items: start; /* Nouveau */
+        grid-auto-rows: 1fr; /* Nouveau */
+      }
+      
+      .popular__card img {
+        max-width: 250px;
+        height: 400px; /* Nouveau */
+        width: 100%; /* Nouveau */
+        object-fit: cover; /* Nouveau */
+        margin-inline: auto;
+      }
+      
+      .popular__card__content {
+        padding: 1rem;
+        background-color: white;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+      }
+      .popular__card {
+        position: relative;
+        isolation: isolate;
+      }
+      
+      .popular__card::before {
+        position: absolute;
+        content: "";
+        bottom: 5rem;
+        left: 0;
+        height: 60%;
+        width: 100%;
+        z-index: -1;
+        transition: 0.5s;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+      }
+      .popular__card:hover::before {
+        height: 90%;
+      }
+      
+      .popular__card:nth-child(1)::before {
+        background-color: #fde6f2;
+      }
+      
+      .popular__card:nth-child(2)::before {
+        background-color: #eedfd9;
+      }
+      
+      .popular__card:nth-child(3)::before {
+        background-color: #faeaed;
+      }
+      
+      .popular__card__content h4 {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color:#000000;
+        text-align: center;
+      }
+      
+      .popular__card__content h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #000000;
+        text-align: center;
+      }
+      /* Ajoutez ces styles dans votre fichier CSS */
+.btn-custom {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e) !important;
+    border: none !important;
+    color: white !important;
+    padding: 12px 25px !important;
+    border-radius: 30px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+    font-family: 'Poppins', sans-serif !important;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4) !important;
+  }
+  
+  .btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+    background: linear-gradient(45deg, #ff8e8e, #ff6b6b) !important;
+  }
+  
+  .btn-custom:active {
+    transform: scale(0.98);
+  }
+  
+  .btn-custom.added {
+    animation: bounce 0.5s ease;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Ajoutez une icône de corbeille */
+  .btn-custom::after {
+    content: '+';
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+      @media (min-width: 768px) {
+        .popular__container .section__header {
+          text-align: left;
+        }
+      
+        .popular__grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
