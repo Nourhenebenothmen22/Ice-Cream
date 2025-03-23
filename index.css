@@ -1,0 +1,109 @@
+    *{
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+    }
+    /* Style général de la navbar */
+    .navbar {
+        background: linear-gradient(135deg, #ffa8d8 0%, #ffe6f0 100%);
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    /* Brand avec effet glacé */
+    .navbar-brand {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #2c3e50 !important;
+        letter-spacing: 1px;
+        position: relative;
+    }
+
+    .navbar-brand span {
+        color: #ff6b6b;
+        font-weight: 400;
+        margin-left: 3px;
+    }
+
+    .nav-link {
+        color: #2c3e50 !important;
+        font-weight: 500;
+        margin: 0 15px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .nav-link:hover {
+        color: #ff6b6b !important;
+        transform: translateY(-3px);
+        text-shadow: 0 3px 8px rgba(52, 152, 219, 0.2);
+    }
+    
+
+    /* Bouton de recherche */
+    .btn {
+        background: #ff6b6b;
+        color:#000000;
+        border-radius: 25px;
+        padding: 8px 25px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .btn:hover {
+        background: transparent;
+        color: #ff6b6b !important;
+        border: none;
+        transform: translateY(-2px);
+    }
+    .hero-section {
+        background: linear-gradient(45deg, #fff5f0 0%, #fff 100%);
+    }
+    
+    .highlight-text {
+        color: #ff6b6b;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .highlight-text::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: currentColor;
+        border-radius: 2px;
+    }
+    
+    .cta-button {
+        transition: transform 0.3s ease;
+        background: #ff6b6b !important;
+        border: none;
+    }
+    
+    .cta-button:hover {
+        transform: translateY(-3px);
+        background: #ff5252;
+    }
+    
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+    
+    .social-link {
+        color: #2c3e50;
+        transition: color 0.3s ease;
+    }
+    
+    .social-link:hover {
+        color: #ff6b6b;
+    }
+    
